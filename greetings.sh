@@ -10,6 +10,6 @@
 
 read -p "Enter your name:" name
 date=$(date "+%y-%m-%d")
-
-#greet the user with echo statement and display the time along with it.
-echo "Hello $name !! , Welcome to the script , date is $date "
+time=$(TZ="Asia /kolkata" date +"%H:%M")
+#greet the user with echo statement and display the date and time.
+echo "Hello $name !! , Welcome to the script , date is $date and time is $time "
