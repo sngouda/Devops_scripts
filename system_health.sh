@@ -34,4 +34,19 @@ echo
 echo "           DISK USAGE           "
 df -h
 
+echo "-------------------------------------------------------------"
+
+usage=$(df / | awk 'NR==2 {print $5}' |  tr -d '%' )
+
+if [ "$usage" -ge 80 ]
+then 
+echo " Disk is more space"
+else 
+echo "disk is in healthy mode"
+fi
+
+
+
+
+
 
