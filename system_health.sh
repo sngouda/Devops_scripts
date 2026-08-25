@@ -40,9 +40,11 @@ usage=$(df / | awk 'NR==2 {print $5}' |  tr -d '%' )
 
 if [ "$usage" -ge 80 ]
 then 
-echo " Disk is more space"
+echo " Warning !! Disk is out of space"
+echo "it used $usage"
 else 
 echo "disk is in healthy mode"
+echo "usgae of disk is $usage"
 fi
 
 
