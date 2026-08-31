@@ -13,13 +13,13 @@ echo "          SYSTEM HEALTH REPORT       "
 
 
 
-date
+echo "date: $(date)"
 
-hostname
+echo "hostname: $(hostname)"
 
-whoami
+echo "User $(whoami)"
 
-uname -r
+echo "Kernal: $(uname -r)"
 
 
 
@@ -52,10 +52,10 @@ usage=$(df / | awk 'NR==2 {print $5}' |  tr -d '%' )
 if [ "$usage" -ge 80 ]
 then 
 echo " Warning !! Disk is out of space"
-echo "it used $usage"
+echo "it used $usage%"
 else 
 echo "disk is in healthy mode"
-echo "usgae of disk is $usage"
+echo "usgae of disk is $usage%"
 fi
 
 
