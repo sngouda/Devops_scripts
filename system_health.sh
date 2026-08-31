@@ -12,6 +12,17 @@ set -e #Stops execution when there is an error
 echo "          SYSTEM HEALTH REPORT       "
 
 
+
+date
+
+hostname
+
+whoami
+
+uname -r
+
+
+
 echo
 echo "           CPU INFORMATION        "
 echo "CPU Model:"
